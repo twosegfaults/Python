@@ -1,42 +1,14 @@
-string=str(input("Enter the desired string:"))
-print(len(string))
-#    if i<3:
-#        if string[i]==string[i-1] or string[i]==string[i-2]:
-#            print("False")
-#            break
-#        i+=1
-#        continue
-#    for j in range(i-3,i):
-#        if string[j]==string[i]:
-#            print("False")
+#string=str(input("Enter the desired string:"))
+# I have entered the user-input method as comments
+input_file=open(r"input.txt", "r")
+line=input_file.readlines()
 
-#def pattern(srt):
-#    x=1
-#    y=0
-#    bf1=0
-#    bf2=0
-#    for i in range(0,len(srt)):
-#        if i<3:
-#            i+=3
-#        string2=srt[i-3:i+1]
-#        for j in range(0,3):
-#            for k in range(j+1, 4):
-#                if string2[j]!=string2[k]:
-#                    y+=1
-#                else: 
-#                    x-=1
-#                    bf1+=1
-#                    break
-#            if bf1==1:
-#                bf2+=1
-#                break
-#        if bf2==1:
-#            break        
-#    return x
-
-#x= pattern(string)
-#print(x)    
-
+def call():
+    for a in range(0, len(line)):
+        st=line[a]
+        x= pat(st)
+        print("The position of the buffer is:", x)
+    input_file.close()
 
 def pat(buffer):
     for i in range(3, len(buffer)):
@@ -47,7 +19,8 @@ def pat(buffer):
                 l.append(string2[j])
         if len(l)==4:
             return i+1
-    return 0
+    return -1
 
-x= pat(string)
-print("The position of the buffer is:", x)
+call()
+#x= pat(string)
+#print("The number of characters needed to be processed is:", x)
