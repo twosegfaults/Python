@@ -7,7 +7,7 @@ def call():
     for a in range(0, len(line)):
         st=line[a]
         x= pat(st)
-        print("The position of the buffer is:", x)
+        print("The number of characters needed to be processed is:", x)
     input_file.close()
 
 def pat(buffer):
