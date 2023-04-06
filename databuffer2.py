@@ -11,10 +11,10 @@ def call():
     input_file.close()
 
 def pat(buffer):
-    for i in range(3, len(buffer)):
+    for i in range(13, len(buffer)):
         l=[]
         string2=buffer[i-13:i+1]
-        for j in range(0,4):
+        for j in range(0,14):
             if string2[j] not in l:
                 l.append(string2[j])
         if len(l)==14:
